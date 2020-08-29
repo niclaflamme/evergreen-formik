@@ -68,21 +68,15 @@ const App = () => {
             initialValues={initialValues}
             validationSchema={validationSchema}
           >
-            <Pane
-              marginBottom={20}
-            >
-              <Heading
-                size={600}
-              >
+            <Pane marginBottom={20}>
+              <Heading size={600}>
                 This form is awesome
               </Heading>
               <Paragraph>
                 Even the subtitle is awesome
               </Paragraph>
             </Pane>
-            <Pane
-              marginBottom={60}
-            >
+            <Pane marginBottom={60}>
               <Field
                 name="fullName"
                 label="First name"
