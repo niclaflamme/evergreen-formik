@@ -16,7 +16,7 @@ const defaultProps = {
 }
 
 
-const Toggle = ({ field, ...props }) => {
+const Toggle = ({ field, form, ...props }) => {
   const [,, helpers] = useField(field.name)
 
   const toggleValue = () => {

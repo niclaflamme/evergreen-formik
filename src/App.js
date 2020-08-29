@@ -5,7 +5,8 @@ import {
   Card,
   Heading,
   Pane,
-  Text,
+  Paragraph,
+  Label,
   ThemeProvider,
 } from 'evergreen-ui'
 import * as yup from 'yup'
@@ -54,7 +55,7 @@ const App = () => {
         justifyContent="center"
         height="100vh"
         width="100vw"
-        background="#5B91FF"
+        background="#f2fbff"
       >
         <Card
           background="white"
@@ -75,16 +76,16 @@ const App = () => {
               >
                 This form is awesome
               </Heading>
-              <Text>
+              <Paragraph>
                 Even the subtitle is awesome
-              </Text>
+              </Paragraph>
             </Pane>
             <Pane
               marginBottom={60}
             >
               <Field
                 name="fullName"
-                label="Fist name"
+                label="First name"
                 component={TextInput}
                 displayErrorOnBlur
               />
@@ -95,6 +96,19 @@ const App = () => {
                 component={TextInput}
                 displayErrorOnBlur
               />
+              <Pane marginBottom={24}>
+                <Pane marginBottom={4}>
+                  <Label>
+                    Are you happy?
+                  </Label>
+                </Pane>
+                <Pane>
+                  <Field
+                    name="isHappy"
+                    component={Toggle}
+                  />
+                </Pane>
+              </Pane>
               <Field
                 name="gender"
                 label="Gender"
@@ -102,12 +116,6 @@ const App = () => {
                 options={genderOptions}
                 displayErrorOnBlur
               />
-              <Pane>
-                <Field
-                  name="isHappy"
-                  component={Toggle}
-                />
-              </Pane>
             </Pane>
             <Pane>
               <Button
