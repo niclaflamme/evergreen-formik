@@ -12,6 +12,7 @@ import {
 import * as yup from 'yup'
 
 import TextInput from 'components/form/TextInput'
+import BWTextInput from 'components/baseui-form/TextInput'
 import Select from 'components/form/Select'
 import Toggle from 'components/form/Toggle'
 import Form from 'components/form/Form'
@@ -81,6 +82,12 @@ const App = () => {
                 name="fullName"
                 label="First name"
                 component={TextInput}
+                displayErrorOnBlur
+              />
+              <Field
+                name="fullName"
+                label="First name"
+                component={BWTextInput}
                 displayErrorOnBlur
               />
               <Field
